@@ -1,0 +1,32 @@
+!Homepage
+bing.com###aitools
+bing.com##a[aria-label*="Copilot"]
+!Search results
+bing.com##li:has(#b_genserp_container)
+bing.com###b-scopeListItem-copilotsearch
+
+!Search results summary
+google.com##[data-lhcontainer][style^="margin-bottom"] > div
+google.com##[data-lhcontainer]:not([style^="margin-bottom"])
+!"AI mode" tab
+google.com##div[role="listitem"]:has(a[href*="udm=50"])
+!Homepage
+google.com##form button[jsaction]
+
+search.brave.com###submit-llm-button
+search.brave.com###llm-snippet
+
+stackoverflow.com##a[href$="/ai-assist"]
+
+!Grok "explain post"
+x.com##article button[aria-label*="Grok"]
+!Grok drawer
+x.com##div[data-testid="GrokDrawer"]
+!Videos made with Grok
+x.com##div[data-testid="cellInnerDiv"]:not(:has(button[data-testid="tweetButtonInline"])):has(article:has(a[href^="https://grok.com/imagine/post/"]))
+!Enhance with grok
+x.com##button[data-testid="grokImgGen"]
+
+!Video summary
+youtube.com###expandable-metadata
+
